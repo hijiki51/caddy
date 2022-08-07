@@ -6,6 +6,7 @@ on:
       - v2.*.*
     branches-ignore:
       - '**'
+# build release 
 
 jobs:
   make-dist:
