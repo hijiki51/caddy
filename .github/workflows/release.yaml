@@ -17,6 +17,11 @@ jobs:
         with:
           go-version: 1.17
       - run: bash ./build.sh
+      - name: Archive caddy-custom_linux_amd64
+        run: |
+          mkdir caddy-custom_linux_amd64
+          mv caddy caddy-custom_linux_amd64/
+          tar -zcvf ./caddy-custom_linux_amd64.tar.gz ./caddy-custom_linux_amd64
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
